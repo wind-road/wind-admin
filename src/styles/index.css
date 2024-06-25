@@ -1,0 +1,5 @@
+/* ./src/index.css */
+/* Tailwind 会在构建时将这些指令转换成所有基于您配置的设计系统生成的样式文件。 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
