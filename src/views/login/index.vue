@@ -2,7 +2,7 @@
   <div id="userLayout" class="w-full h-[100vh] relative flex justify-center items-center">
     <div
       class="flex-1 md:bg-none h-full p-1 flex justify-center items-center"
-      style="background-image: linear-gradient(-70deg, rgb(99 102 241) 50%, #fff 50%)"
+      style="background-image: linear-gradient(-70deg, rgb(99 102 241) 49.9%, #fff 50.1%)"
     >
       <el-form
         ref="loginFormRef"

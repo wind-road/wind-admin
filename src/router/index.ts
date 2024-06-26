@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Layout from '@/views/layout/index.vue'
+import Layout from '@/layouts/index.vue'
 
 export const menu = [
   {
