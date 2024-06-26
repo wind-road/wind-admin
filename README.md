@@ -1,5 +1,3 @@
-# student-management
-
 
 ## Project Setup
 
