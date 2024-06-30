@@ -1,8 +1,23 @@
 <template>
   <div id="userLayout" class="w-full h-[100vh] relative flex justify-center items-center">
     <div
-      class="flex-1 md:bg-none h-full p-1 flex justify-center items-center"
-      style="background-image: linear-gradient(-70deg, rgb(99 102 241) 49.9%, #fff 50.1%)"
+      :class="[
+        'flex-1',
+        'md:bg-none',
+        'dark:bg-[--wind-dark-bg]',
+        'dark:text-[--wind-dark-text]',
+        'h-full',
+        'p-1',
+        'flex',
+        'justify-center',
+        'items-center',
+        'bg-gradient-to-tl',
+        'from-[#666af1]',
+        'from-[49.9%]',
+        'to-[#fff]',
+        'dark:to-[--wind-dark-bg]',
+        'to-[50.1%]'
+      ]"
     >
       <el-form
         ref="loginFormRef"
@@ -26,15 +41,25 @@
       </el-form>
     </div>
     <div
-      class="hidden md:block min-w-[200px] h-full border-t-indigo-500 border-t-[100vh] border-l-[200px] border-l-transparent"
+      class="hidden md:block min-w-[200px] h-full border-t-indigo-500 border-t-[100vh] border-l-[200px] border-l-white dark:border-l-[--wind-dark-bg]"
     ></div>
-    <div class="flex-1 hidden md:block h-full bg-indigo-500"></div>
+    <div class="flex-1 hidden md:flex h-full bg-indigo-500 justify-end">
+      <el-tooltip class="" effect="dark" content="主题" placement="bottom">
+        <el-icon
+          class="w-8 h-8 m-5 rounded-full border border-solid cursor-pointer text-white"
+          @click="toggleDark"
+        >
+          <i-ep-moon />
+        </el-icon>
+      </el-tooltip>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { FormItemRule, FormInstance, FormRules } from 'element-plus'
 import { useUserStore } from '@/stores/users'
+import { toggleDark } from '@/hook/index'
 const store = useUserStore()
 console.log(store.userInfo)
 
