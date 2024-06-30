@@ -9,8 +9,11 @@ const isCollapse = ref(true)
     <div class="h-[calc(100vh-4rem)] flex">
       <aside class="shadow dark:shadow-gray-300" :class="[isCollapse ? 'w-[60px]' : 'w-[200px]']">
         <Sidebar class="h-[calc(100vh-7rem)]" :isCollapse="isCollapse" />
-        <el-button class="h-[3rem] w-full border-none dark:bg-[--wind-dark-bg]" @click="isCollapse = !isCollapse">
-          <el-icon v-if="!isCollapse" ><i-ep-d-arrow-left /></el-icon>
+        <el-button
+          class="h-[3rem] w-full border-none dark:bg-[--wind-dark-bg]"
+          @click="isCollapse = !isCollapse"
+        >
+          <el-icon v-if="!isCollapse"><i-ep-d-arrow-left /></el-icon>
           <el-icon v-else><i-ep-d-arrow-right /></el-icon>
         </el-button>
       </aside>

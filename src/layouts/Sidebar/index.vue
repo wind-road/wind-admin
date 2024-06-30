@@ -18,13 +18,16 @@ const handleClose = (key: string, keyPath: string[]) => {
   --el-menu-bg-color: --wind-dark-bg;
   --el-menu-text-color: --wind-dark-text;
   --el-menu-hover-bg-color: var(--wind-dark-hover-bg-color);
+}
+.el-menu {
   --el-menu-border-color: rgba(0,0,0,0)
 }
 </style>
 <template>
-  <div class="w-full">
+  <div class="w-full pt-1">
     <el-menu
       default-active="2"
+      class="h-full"
       :collapse="isCollapse"
       :collapse-transition="false"
       @open="handleOpen"
