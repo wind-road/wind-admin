@@ -19,16 +19,19 @@ const tableData = Array.from({ length: 100 }, () => createTable())
 }
 </style>
 <template>
-  <div class="">
+  <div class="h-full flex flex-col">
     <el-table
       :data="tableData"
-      class="home-data-table w-full dark:text-[--wind-dark-text]"
-      row-class-name="dark:bg-[--wind-dark-bg] "
-      header-cell-class-name="dark:bg-[--wind-dark-bg] "
+      class="home-data-table w-full flex-1 dark:text-[--wind-dark-text]"
+      row-class-name="dark:bg-[--wind-dark-bg]"
+      header-cell-class-name="dark:bg-[--wind-dark-bg]"
     >
       <el-table-column prop="date" label="Date" width="180" />
       <el-table-column prop="name" label="Name" width="180" />
       <el-table-column prop="address" label="Address" />
     </el-table>
+    <div class="flex justify-end">
+      <el-pagination :page-size="20" :pager-count="11" layout="prev, pager, next" :total="1000" />
+    </div>
   </div>
 </template>

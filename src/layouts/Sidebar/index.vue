@@ -13,18 +13,8 @@ const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
 </script>
-<style lang="scss">
-.dark .el-menu {
-  --el-menu-bg-color: --wind-dark-bg;
-  --el-menu-text-color: --wind-dark-text;
-  --el-menu-hover-bg-color: var(--wind-dark-hover-bg-color);
-}
-.el-menu {
-  --el-menu-border-color: rgba(0,0,0,0)
-}
-</style>
 <template>
-  <div class="w-full pt-1">
+  <div class="w-full pt-[1px]">
     <el-menu
       default-active="2"
       class="h-full"

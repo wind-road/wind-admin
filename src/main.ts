@@ -1,7 +1,8 @@
 // import './assets/main.css'
 // import 'element-plus/theme-chalk/dark/css-vars.css'
-// import './styles/dark/css-vars.css'
 import './styles/index.css'
+// 黑暗模式样式
+import './styles/dark/css-vars.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
