@@ -1,5 +1,10 @@
+## 项目介绍
+### 登录页面
+![alt 登录示例图片](./public/login_01.png)
+### 首页页面
+![alt 首页示例图片](./public/home_01.png)
 
-## Project Setup
+## 项目命令
 
 ```sh
 pnpm install
@@ -17,7 +22,7 @@ pnpm build
 pnpm lint
 ```
 
-## git commit type
+## git 提交类型
 ```base
 feat: 新功能 (feature)
 
