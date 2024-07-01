@@ -20,21 +20,24 @@
   0% {
     top: 3rem;
     right: 3rem;
-    /* width: 0rem;
-    height: 0rem; */
+    width: 0rem;
+    height: 0rem;
     clip-path: circle(0rem at center);
   }
   100% {
     top: calc(-50vmax + 3rem);
     right: calc(-50vmax + 3rem);
-    /* width: 100vmax;
-    height: 100vmax; */
+    width: 100vmax;
+    height: 100vmax;
     clip-path: circle(100% at center);
   }
 }
-/* 菜单 */
-.dark .el-menu {
-  --el-menu-bg-color: --wind-dark-bg;
+/* 黑暗主题变量 */
+:root .dark {
+  --el-fill-color-blank: --wind-dark-bg;
+  --el-text-color-primary: --wind-dark-text;
+
+  --el-menu-bg-color: --el-fill-color-blank;
   --el-menu-text-color: --wind-dark-text;
   --el-menu-hover-bg-color: var(--wind-dark-hover-bg-color);
 }
