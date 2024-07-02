@@ -1,4 +1,5 @@
 // 切换黑暗模式
+// todo 待优化
 export const toggleDark = (e: Event) => {
   const app = document.getElementById('app')
   const appDark = document.getElementById('app-dark')
@@ -9,28 +10,16 @@ export const toggleDark = (e: Event) => {
   app.classList.add('hidden')
   appDark.classList.remove('hidden')
 
-  const mode = localStorage.getItem('mode') || 'light'
+  // const mode = localStorage.getItem('mode') || 'light'
+  
+  document.documentElement?.classList.toggle('dark')
 
-  // 待优化
-  if (['dark', 'light'].includes(mode)) {
-    appDark.classList.remove('light')
-    appDark.classList.remove('dark')
-    const appView = appDark.querySelector('#app');
-    appView?.classList.remove('dark')
-    appView?.classList.remove('light')
-    if (mode === 'dark'){
-      // -------------------
-      app.classList.add('light')
-      app.classList.remove('dark')  
-      localStorage.setItem('mode', 'light')
-    }
-    if (mode === 'light'){
-      appDark.classList.add('dark')
-      app.classList.add('dark')
-      app.classList.remove('light')
-      localStorage.setItem('mode', 'dark')
-    }
-  }
+  // const negate = (mode: string) => {
+  //   return mode === 'dark' ? 'light' : 'dark'
+  // }
+  
+  // if (['dark', 'light'].includes(mode)) {}
+
   appDark.querySelector('#app')?.classList.add('anim')
   const time = setTimeout(() => {
     appDark.innerHTML = ''
