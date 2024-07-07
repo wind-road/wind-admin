@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Header from './header/index.vue'
+import Header from './Header/index.vue'
 import Sidebar from './Sidebar/index.vue'
 const isCollapse = ref(true)
 </script>
